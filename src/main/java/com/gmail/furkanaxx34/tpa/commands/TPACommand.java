@@ -30,7 +30,7 @@ public class TPACommand extends BaseCommand {
           return;
       }
       if (TPHandler.hasSent(player, targetPlayer)) {
-        player.sendMessage(XColor.colorize("&eYou have already sent a request to this player. Please wait."));
+        player.sendMessage(XColor.colorize("&eYou must wait before sending a request to this player again."));
         return;
       }
       TPHandler.sendRequest(player, targetPlayer);
