@@ -2,3 +2,10 @@ name: TPA
 version: '${version}'
 main: com.gmail.furkanaxx34.tpa.TPA
 api-version: 1.17
+commands:
+  tpa:
+    description: Teleport to a player.
+  tpaccept:
+    description: Accept teleport request.
+  tpdeny:
+    description: Decline teleport request.

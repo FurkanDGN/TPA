@@ -16,11 +16,21 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven { url = "https://repo.aikar.co/content/groups/aikar/" }
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    // Dependencies
     implementation 'co.aikar:acf-paper:0.5.0-SNAPSHOT'
+
+    // Spigot-API
+    compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+
+    // annotations
+    compileOnly 'org.jetbrains:annotations:22.0.0'
+    annotationProcessor 'org.jetbrains:annotations:22.0.0'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 def targetJavaVersion = 16
