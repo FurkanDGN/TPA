@@ -6,7 +6,6 @@ import com.gmail.furkanaxx34.tpa.commands.TPAcceptCommand;
 import com.gmail.furkanaxx34.tpa.commands.TPDenyCommand;
 import com.gmail.furkanaxx34.tpa.handler.TPHandler;
 import com.gmail.furkanaxx34.tpa.util.ListenerBasic;
-import com.gmail.furkanaxx34.tpa.util.TaskUtilities;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,7 +14,6 @@ public final class TPA extends JavaPlugin {
   @Override
   public void onEnable() {
     registerListeners();
-    TaskUtilities.init(this);
     PaperCommandManager manager = new PaperCommandManager(this);
     manager.registerCommand(new TPACommand());
     manager.registerCommand(new TPAcceptCommand());
